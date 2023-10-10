@@ -24,6 +24,7 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
   check-docs:
+    needs: labeler
     if: |
       (github.event_name == 'push' && github.head_ref == 'main') ||
       contains(github.event.pull_request.labels.*.name, 'doc')
