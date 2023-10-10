@@ -1,7 +1,6 @@
 name: Check Docs
 
-on:
-  pull_request:
+on: [pull_request]
 
 env:
   RAILS_ENV: test
